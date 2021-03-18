@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17 Jquery functions </title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+            $(document).ready(function(){
+                $("#clickbutton").click(function () {
+                    var pTag = $("#clickpTage"); 
+                    pTag.css("backgroundColor", "green"); 
+                    })
+                $("#hidebutton").click(function () {
+                    $("#hidepTag").hide();
+                });
+                
+                $('#hiddenpTag').hide();
+                $('#showbutton').click(function () {  
+                    $('#hiddenpTag').show();
+                });
+            
+                $('#togglebutton').click(function () {
+                    $('#togglepTag').toggle();    
+                });
+
+                $('#sidedownpTag').hide();
+                $('#sidedownbutton').click(function () {
+                
+                $('#sidedownpTag').slideDown("slow"); 
+                    });
+
+                    
+                $('#slideupbutton').click(function (){
+                $('#sideuppTag').slideUp("slow");
+                });
+
+                    $('#sidetogglepTag').hide(); 
+                    $('#slidetogglebutton').click(function (){
+                    $('#sidetogglepTag').slideToggle("slow"); 
+                });
+
+                $("#fadeinpTag").hide(); 
+                $("#fadeinbutton").click(function(){
+                $("#fadeinpTag").fadeIn("slow");
+                });
+
+                $("#fadeoutbutton").click(function(){
+                $("#fadeoutpTag").fadeOut("slow"); 
+
+                });
+
+                $("#addclassbutton").click(function(){
+                $("#addclasspTag").addClass("newclass"); 
+                }); 
+
+                $("#beforebutton").click(function(){
+                    $("#beforepTag").before("<b>This is Before</b>"); 
+
+                });
+                $("#afterbutton").click(function(){
+                $("#afterpTag").after("<b>This text is after</b>")
+                });
+                $("#appendbutton").click(function(){
+                $("#appendpTag").append("<b>This is append to the rest of the text</b>")    
+                });
+
+                $("#attrbutton").click(function(){
+                var title = $("em").attr("title"); 
+                $("#attrpTag").text(title); 
+                    });  
+
+                $("#valbutton").click(function(){
+                    var text =$(this).text(); 
+                    $("input").val(text);
+                });
+
+                $("#textbutton").click(function(){
+                $("#textpTag").text("NEW Text Passed here")    
+                });
+            
+            // End of document ready
+            })
+    </script>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="line">
+        <h1 class="clickfunction">Use the click function</h1>
+        <button id="clickbutton">Click here to change color to red. </button>
+        <p id="clickpTage">This text will be red.</p>
+    </div>
+    <div class="line">
+        <h1 class="hidefunction">Hide function</h1>
+        <button id="hidebutton">Click here to hide text</button>
+        <p id="hidepTag">This will be hidden </p>
+    </div>
+    <div class="line">
+        <h1 class="showfunction">This will show the function</h1>
+        <button id="showbutton">This will show text that has been hidden</button>
+        <p id="hiddenpTag">This text is hidden </p>
+    </div>
+    <div class="line">  
+        <h1 class="togglefunction">This will toggle on and off text</h1>
+        <button id="togglebutton">Toggle this text on and off</button>
+        <p id="togglepTag">This will be on or off</p>
+    </div> 
+    <div class="line">
+        <h1 class="slidedownfunction">Thill will show the slide down function.</h1>
+        <button id="sidedownbutton">This will make the text slide down </button>
+        <p id="sidedownpTag">Slided down p tag</p>
+    </div>
+    <div class="line">
+        <h1 class="slideupfunction">This will show the slide up function</h1>
+        <button id="slideupbutton">This will make the text slide up</button>
+        <p id="sideuppTag">text will be sliding up</p>
+    </div>
+    <div class="line">
+        <h1 class="slidetogglefunction">This will show the slidetoggle function</h1>
+        <button id="slidetogglebutton">this will make the text slidetoggle</button>
+        <p id="sidetogglepTag">Side toggle p tag text</p>
+    </div>
+    <div class="line">
+        <!-- --------------------------------------------------------------- -->
+        <h1 class="fadeinfunction">This will show the fadein function</h1>
+        <button id="fadeinbutton">this will make the text fadein</button>
+        <p id="fadeinpTag">fadein p tag text</p>
+    </div>
+    <div class="line">
+        <h1 class="faceoutfunction">This will show the fadeout function</h1>
+        <button id="fadeoutbutton">this will make the text fadeout</button>
+        <p id="fadeoutpTag">Side fadeout p tag text</p>
+    </div>
+    <div class="line">
+        <h1 class="addclassfunction">This will add a class function</h1>
+        <button id="addclassbutton">This will add class to the text</button>
+        <p id="addclasspTag">I'm a new class of color</p>
+    </div>
+    <div class="line">
+        <h1 class="beforefunction">This will show the before function</h1>
+        <button id="beforebutton">this will make the text before</button>
+        <p id="beforepTag">Side add some text before this p tag text</p>
+    </div>
+    <div class="line">
+        <h1 class="afterfunction">This will show the after function</h1>
+        <button id="afterbutton">this will make the text after</button>
+        <p id="afterpTag">Text will be add after this p tag</p>
+    </div>
+    <div class="line">
+        <h1 class="appendfunction">This will show the append function</h1>
+        <button id="appendbutton">this will make the text slidetoggle</button>
+        <p id="appendpTag">Sometext will be appended to this p tag</p>
+    </div>
+    <div class="line">
+        <h1 class="htmlfunction">This will show the html function</h1>
+        <button id="htmlbutton">add some html element to the text below</button>
+        <p id="htmlpTag">Going to change some text via using the hmtl function</p>
+    </div>
+    <div class="line">
+        <h1 class="attrfunction">This will show the attr function</h1>
+        <button id="attrbutton">use the attr function</button>
+        <p id="attrpTag">Side toggle <em title = "Test"></em>p tag text</p>
+    </div>
+    <div class="line">
+        <h1 class="valfunction">This will show the val function</h1>
+        <button id="valbutton">show the val</button>
+        <input type="text" value="click a button">
+        <p id="valpTag">showing off the val function</p>
+    </div>
+    <div class="line">
+        <h1 class="textfunction">This will show the showing off the text function </h1>
+        <button id="textbutton">Using the text function</button>
+        <p id="textpTag">going to show off the text function</p> 
+    </div>
+    
+
+
+    </div>
+</body>
+</html>
